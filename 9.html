@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Registeration</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: red;
+            font-size: xx-large;
+        }
+
+        a:link {
+            color: green;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('693812-vertical-hospital-wallpapers-1920x1080-for-4k-monitor.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <h1>Hospital Management System</h1>
+    <table>
+        <tr>
+            <td><h3><a href="index.html">Home</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+            <td><h3><a href="3.html">Login</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+            <td><h3><a href="#">Appointment</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+            <td><h3><a href="#">Our Doctor's</a>&emsp;&emsp;</h3>&emsp;&emsp;&nbsp;&nbsp;&emsp;</td>&emsp;&emsp;
+            <td><h3><a href="2.html">FAQ'S</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+            <td><h3><a href="#">Contact</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+            <td>&emsp;<h3><a href="4.html">Feedback</a></h3><br>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+        </tr>
+    </table><br>
+    <form action="">
+        <center><h2>Doctor Login</h2></center><br><br>
+        <center> First Name:&nbsp;&nbsp;<input type="text" name="dfname"></center><br>
+        <center> Last Name: &nbsp;&nbsp;&nbsp;<input type="text" name="dlname"></center><br>
+        <center> Password: &nbsp;&nbsp;&nbsp;<input type="password" name="dpass"></center><br>
+        <center> Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="demail"></center><br>
+        <center> Age:&emsp;&emsp;&emsp; <input type="text" name="dage"></center><br>
+        <center>
+            <label for="dDate-of-Birth">Date-of-Birth:</label>
+            <input type="date" id="dDate-of-Birth" name="dDate-of-Birth">
+        </center><br>
+        <center>
+            Gender:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <select name="dgender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="both">Both</option>
+        </select>
+        </center><br>
+        <center>
+            &emsp;&emsp;&emsp;&emsp;Specialty:
+            <select name="ddoctor">
+                <option>Select your Specialty</option>
+                <option>Allergy & immunology</option>
+                <option>Anesthesiology</option>
+                <option>Ayurveda</option>
+                <option>Cardiology (Disease)</option>
+                <option>Cardiology (Interventional)</option>
+                <option>Child & Adolescent Psychiatry</option>
+                <option>Chiropractic</option>
+                <option>Clinical Cardiac Electrophysiology</option>
+                <option>Dentist</option>
+                <option>Diagnostic Radiology</option>
+                <option>Dermatology</option>
+                <option>Emergency Medicine</option>
+                <option>Endocrinology</option>
+                <option>Facial Plastic Surgery</option>
+                <option>Family Medicine</option>
+                <option>Gastroenterology</option>
+                <option>General Practice</option>
+                <option>General Surgery </option>
+                <option>Geriatric Medicine</option>
+                <option>Hematology</option>
+                <option>Hepatology</option>
+                <option>Hospitalist</option>
+                <option>Infectious Disease</option>
+                <option>Internal Medicine</option>
+                <option>Medical Genetics</option>
+                <option>Naturopathy</option>
+                <option>Nephrology</option>
+                <option>Neurology</option>
+                <option>Neurosurgeon</option>
+                <option>Nuclear Medicine</option>
+                <option>Nutritionist</option>
+                <option>Obstetrics / Gynecology (OBGYN)</option>
+                <option>Occupational Medicine</option>
+                <option>Ophthalmology </option>
+                <option>Optometry</option>
+                <option>Oncology</option>
+                <option>Orthopedic Surgery</option>
+                <option>Osteopathic Medicine</option>
+                <option>Otolaryngology / ENT</option>
+                <option>Pathology (Anatomic/Clinical)</option>
+                <option>Pediatrics</option>
+                <option>Physical Medicine and Rehabilitation</option>
+                <option>Plastic & Reconstructive Surgery</option>
+                <option>Podiatry</option>
+                <option>Primary Care</option>
+                <option>Psychiatry</option>
+                <option>Psychology</option>
+                <option>Pulmonary Disease</option>
+                <option>Radiology</option>
+                <option>Rheumatology</option>
+                <option>Thoracic Surgery</option>
+                <option>Transplant Surgery</option>
+                <option>Unani</option>
+            </select>
+        </center><br>
+        <center> &nbsp;&nbsp;&nbsp;&nbsp;Address:&emsp;&emsp;&nbsp;&nbsp;<input type="text" name="daddress"></center><br>
+        <center> &nbsp;&nbsp;Experience:&emsp;&emsp;<input type="text" name="dexp"></center><br>
+        <center> &emsp;&emsp;&nbsp;Degree:&emsp;&emsp;<input type="text" name="ddeg"></center><br>
+        <center> &emsp;&emsp;&nbsp;&nbsp;City:&emsp;&emsp;&emsp;<input type="text" name="dcity"></center><br>
+        <center> &emsp;&nbsp;State:&emsp;&emsp;&emsp;&emsp;<input type="text" name="dstate"></center><br>
+        <center> Postal/Zip Code:&emsp;<input type="text" name="dzip"></center><br>
+        <center> Contact Number:&emsp;<input type="text" name="dnum"></center><br>
+        <center><button type="submit">Register</button></center><br>
+    </form>
+    <br><br><br>
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <h2> &emsp; &emsp;&emsp;&emsp;&emsp; Avaliable 24*7</h2>
+                    <p>
+                        &emsp; &emsp;&emsp;&emsp;&emsp;It is avaliable all the time to the patients of our <br>
+                        &emsp; &emsp; &emsp;&emsp;system.You all can login,and then check your records <br>
+                        &emsp; &emsp;&emsp;&emsp;&emsp;and make appointment.
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Payment</h2>
+                    <p>
+                        &emsp;&emsp;&emsp;&emsp;&emsp; We have provided all the methods of payment.In case<br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;if some problem occurs,the money will be transferred to<br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;your account within 48 hours.
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Help</h2>
+                    <p>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;For any help you can refer to the help part<br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;and can clear all your doubts regarding any<br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;issue that you may face.
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

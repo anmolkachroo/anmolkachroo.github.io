@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Home Page</title>
+    <title>Patient Login</title>
     <style>
         h1 {
             text-align: center;
@@ -47,7 +47,16 @@
             <td><h3><a href="#">Contact</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
             <td>&emsp;<h3><a href="4.html">Feedback</a></h3><br>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
         </tr>
-    </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </table>
+    <br><br><br>
+            <form action="DoctorFirstServlet" method="POST">
+                <br><br>
+                <center>Doctor Id:<input type="text" name="pid_1"></center><br><br>
+                <center>Username:<input type="text" name="uname_1"></center><br><br>
+                <br><center>Password:<input type="password" name="pass_1"></center><br>
+                <br><center><button type="submit">Login</button></center><br>
+            </form>
+    <br><br><br><br><br><br><br><br><br>
     <table>
         <tr>
             <td>
@@ -83,11 +92,4 @@
         </tr>
     </table>
 </body>
-
 </html>
-
-
-
-
-
-

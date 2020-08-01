@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Home Page</title>
+    <title>Patient Registeration</title>
     <style>
         h1 {
             text-align: center;
@@ -47,7 +47,60 @@
             <td><h3><a href="#">Contact</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
             <td>&emsp;<h3><a href="4.html">Feedback</a></h3><br>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
         </tr>
-    </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </table>
+    <form action="">
+        <b><center><h2>New Patient</h2></center></b>
+        <div>
+            <center> First Name: &nbsp;&nbsp;<input type="text" name="fname"></center><br>
+        </div>
+        <div>
+            <center> Last Name: &nbsp;&nbsp;&nbsp;<input type="text" name="lname"></center></nbsp><br>
+        </div>
+        <div>
+            <center> Password: &emsp;<input type="password" name="pass"></center><br>
+        </div>
+        <div>
+            <center> Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="email"></center><br>
+        </div>
+        <div>
+            <center> Age:&emsp;&emsp;&emsp; <input type="text" name="age"></center><br>
+        </div>
+        <div>
+            <center>
+                <label for="Date-of-Birth">Date-of-Birth:</label>
+                <input type="date" id="Date-of-Birth" name="Date-of-Birth">
+            </center><br>
+        </div>
+        <div>
+            <center>
+                Gender&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="both">Both</option>
+                </select>
+            </center><br>
+        </div>
+        <div>
+            <center> Address:&emsp;&emsp;<input type="textarea" name="address"></center><br>
+        </div>
+        <div>
+            <center> City:&emsp;&emsp;&emsp;<input type="text" name="city"></center><br>
+        </div>
+        <div>
+            <center> State:&emsp;&emsp;&emsp;<input type="text" name="state"></center><br>
+        </div>
+        <div>
+            <center> Postal/Zip Code:&emsp;<input type="text" name="zip"></center><br>
+        </div>
+        <div>
+            <center> Contact Number:&emsp;<input type="text" name="num"></center><br>
+        </div>
+        <div>
+            <center><button type="submit">Login</button></center>
+        </div>
+    </form>
+    <br><br><br>
     <table>
         <tr>
             <td>
@@ -83,11 +136,4 @@
         </tr>
     </table>
 </body>
-
 </html>
-
-
-
-
-
-
