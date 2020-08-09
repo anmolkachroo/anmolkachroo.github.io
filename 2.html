@@ -28,6 +28,15 @@
     </style>
 </head>
 <body>
+    <p id="clock" style="color:red"></p>
+    <script>
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+
     <style>
         body {
             background-image: url('693812-vertical-hospital-wallpapers-1920x1080-for-4k-monitor.jpg');

@@ -27,6 +27,14 @@
     </style>
 </head>
 <body>
+    <p id="clock" style="color:red"></p>
+    <script>
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
     <style>
         body {
             background-image: url('693812-vertical-hospital-wallpapers-1920x1080-for-4k-monitor.jpg');
@@ -61,11 +69,11 @@
         </center><br>
         <center>
             Gender:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        <select name="dgender">
+            <select name="dgender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="both">Both</option>
-        </select>
+            </select>
         </center><br>
         <center>
             &emsp;&emsp;&emsp;&emsp;Specialty:

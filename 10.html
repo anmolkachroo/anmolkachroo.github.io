@@ -27,6 +27,14 @@
     </style>
 </head>
 <body>
+    <p id="clock" style="color:red"></p>
+    <script>
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
     <style>
         body {
             background-image: url('693812-vertical-hospital-wallpapers-1920x1080-for-4k-monitor.jpg');
@@ -49,13 +57,13 @@
         </tr>
     </table>
     <br><br><br>
-            <form action="DoctorFirstServlet" method="POST">
-                <br><br>
-                <center>Doctor Id:<input type="text" name="pid_1"></center><br><br>
-                <center>Username:<input type="text" name="uname_1"></center><br><br>
-                <br><center>Password:<input type="password" name="pass_1"></center><br>
-                <br><center><button type="submit">Login</button></center><br>
-            </form>
+    <form action="DoctorFirstServlet" method="POST">
+        <br><br>
+        <center>Doctor Id:<input type="text" name="pid_1"></center><br><br>
+        <center>Username:<input type="text" name="uname_1"></center><br><br>
+        <br><center>Password:<input type="password" name="pass_1"></center><br>
+        <br><center><button type="submit">Login</button></center><br>
+    </form>
     <br><br><br><br><br><br><br><br><br>
     <table>
         <tr>
