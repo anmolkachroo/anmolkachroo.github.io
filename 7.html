@@ -1,42 +1,46 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <script>
-function setCookie(cname,cvalue,exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60));
-  var expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
 
-function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
 
-function checkCookie() {
-  var user=getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 30);
+                }
+            }
+        }
     </script>
 
     <title>Patient Login</title>
@@ -48,11 +52,11 @@ function checkCookie() {
         }
 
         a:link {
-            color: green;
+            color: white;
         }
 
         a:visited {
-            color: green;
+            color: white;
         }
 
         a:hover {
@@ -86,13 +90,13 @@ function checkCookie() {
     <h1>Hospital Management System</h1>
     <table>
         <tr>
-            <td><h3><a href="index.html">Home</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
-            <td><h3><a href="3.html">Login</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
-            <td><h3><a href="#">Appointment</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
-            <td><h3><a href="#">Our Doctor's</a>&emsp;&emsp;</h3>&emsp;&emsp;&nbsp;&nbsp;&emsp;</td>&emsp;&emsp;
-            <td><h3><a href="2.html">FAQ'S</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
-            <td><h3><a href="#">Contact</a>&emsp;&emsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
-            <td>&emsp;<h3><a href="4.html">Feedback</a></h3><br>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;&emsp;
+            <td><h3><a class="btn btn-primary" href="index.html" role="button">Home</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
+            <td><h3><a class="btn btn-primary" href="3.html" role="button">Login</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
+            <td><h3><a class="btn btn-primary" href="#" role="button">Appointment</a>&nbsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
+            <td><h3><a class="btn btn-primary" href="#" role="button">Our Doctor's</a>&nbsp;</h3>&emsp;&emsp;&nbsp;&nbsp;&emsp;</td>&emsp;
+            <td><h3><a class="btn btn-primary" href="2.html" role="button">FAQ'S</a>&nbsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
+            <td><h3><a class="btn btn-primary" href="#" role="button">Contact</a>&nbsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
+            <td>&emsp;<h3><a class="btn btn-primary" href="4.html" role="button">Feedback</a></h3><br>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
         </tr>
     </table>
     <br><br><br>
