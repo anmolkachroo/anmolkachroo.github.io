@@ -5,32 +5,121 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Doctor Registeration</title>
     <style>
+        .navbar {
+            background: #F97300;
+        }
+
+        .nav-link, .navbar-brand {
+            color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        .nav-link {
+            margin-right: 1em !important;
+        }
+
+            .nav-link:hover {
+                background: #f4f4f4;
+                color: #f97300;
+            }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-toggler {
+            background: #fff !important;
+        }
+
+        .navbar-brand:hover {
+            background: #f4f4f4;
+            color: #f97300;
+        }
+
+        .bg-dark {
+            background-color: #343a40 !important
+        }
+
+        .bg-primary {
+            background-color: #007bff !important
+        }
+
+        .dropdown-toggle {
+            background: #F97300;
+        }
+
+        .dropdown-item {
+            background: #F97300;
+        }
+
         h1 {
             text-align: center;
             color: red;
             font-size: xx-large;
         }
-
-        a:link {
-            color: white;
-        }
-
-        a:visited {
-            color: white;
-        }
-
-        a:hover {
-            color: red;
-        }
-
-        a:active {
-            color: yellow;
-        }
     </style>
 </head>
 <body>
+    <style>
+        body {
+            background-image: url('images/hospital.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Login</a>
+                    <div class="dropdown-menu">
+                        <a class="nav-link dropdown-toggle" href="5.html" id="navbardrop1" data-toggle="dropdown">Patient</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="6.html">New Patient</a>
+                            <a class="dropdown-item" href="7.html">Existing Patient</a>
+                        </div>
+                        <a class="nav-link dropdown-toggle" href="8.html" id="navbardrop2" data-toggle="dropdown">Doctor</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="9.html">New Patient</a>
+                            <a class="dropdown-item" href="10.html">Existing Patient</a>
+                        </div>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">Pharmicist</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">New Pharmicist</a>
+                            <a class="dropdown-item" href="#">Existing Pharmicist</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="portfolio" href="#">Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="blog" href="#">Our Doctor's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="team" href="2.html">FAQ'S</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="4.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br /><br /><br />
     <p id="clock" style="color:red"></p>
     <script>
         var myVar = setInterval(myTimer, 1000);
@@ -39,33 +128,14 @@
             document.getElementById("clock").innerHTML = d.toLocaleTimeString();
         }
     </script>
-    <style>
-        body {
-            background-image: url('693812-vertical-hospital-wallpapers-1920x1080-for-4k-monitor.jpg');
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
     <h1>Hospital Management System</h1>
-    <table>
-        <tr>
-            <td><h3><a class="btn btn-primary" href="index.html" role="button">Home</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
-            <td><h3><a class="btn btn-primary" href="3.html" role="button">Login</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
-            <td><h3><a class="btn btn-primary" href="#" role="button">Appointment</a>&nbsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
-            <td><h3><a class="btn btn-primary" href="#" role="button">Our Doctor's</a>&nbsp;</h3>&emsp;&emsp;&nbsp;&nbsp;&emsp;</td>&emsp;
-            <td><h3><a class="btn btn-primary" href="2.html" role="button">FAQ'S</a>&nbsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
-            <td><h3><a class="btn btn-primary" href="#" role="button">Contact</a>&nbsp;</h3>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
-            <td>&emsp;<h3><a class="btn btn-primary" href="4.html" role="button">Feedback</a></h3><br>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</td>&emsp;
-        </tr>
-    </table><br>
+    <br>
     <form action="">
         <center><h2>Doctor Login</h2></center><br><br>
         <center> First Name:&nbsp;&nbsp;<input type="text" name="dfname"></center><br>
         <center> Last Name: &nbsp;&nbsp;&nbsp;<input type="text" name="dlname"></center><br>
         <center> Password: &nbsp;&nbsp;&nbsp;<input type="password" name="dpass"></center><br>
-        <center> Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="demail"></center><br>
+        <center> Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="email"></center><br>
         <center> Age:&emsp;&emsp;&emsp; <input type="text" name="dage"></center><br>
         <center>
             <label for="dDate-of-Birth">Date-of-Birth:</label>
