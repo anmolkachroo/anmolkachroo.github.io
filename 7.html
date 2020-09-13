@@ -119,23 +119,34 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Login</a>
-                    <div class="dropdown-menu">
-                        <a class="nav-link dropdown-toggle" href="5.html" id="navbardrop1" data-toggle="dropdown">Patient</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="6.html">New Patient</a>
-                            <a class="dropdown-item" href="7.html">Existing Patient</a>
-                        </div>
-                        <a class="nav-link dropdown-toggle" href="8.html" id="navbardrop2" data-toggle="dropdown">Doctor</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="9.html">New Patient</a>
-                            <a class="dropdown-item" href="10.html">Existing Patient</a>
-                        </div>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">Pharmicist</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">New Pharmicist</a>
-                            <a class="dropdown-item" href="#">Existing Pharmicist</a>
-                        </div>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Login
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Patient Login <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="6.html">New Patient</a></li>
+                                    <li><a tabindex="-1" href="7.html">Existing Patient</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Doctor Login <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="9.html">New Doctor</a></li>
+                                    <li><a tabindex="-1" href="10.html">Existing Doctor</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Pharmcist Login <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">New Pharmicist</a></li>
+                                    <li><a tabindex="-1" href="#">Existing Pharmicist</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -165,8 +176,16 @@
             document.getElementById("clock").innerHTML = d.toLocaleTimeString();
         }
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.test').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>
     <h1>Hospital Management System</h1>
-
     <br><br><br>
     <form action="" method="">
         <br>

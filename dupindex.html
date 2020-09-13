@@ -37,6 +37,9 @@
             background: #fff !important;
         }
 
+        .nav-item {
+            background: #F97300;
+        }
         .bg-dark {
             background-color: #343a40 !important
         }
@@ -52,6 +55,8 @@
         .dropdown-toggle {
             background: #F97300;
         }
+        
+        
 
         h1 {
             text-align: center;
@@ -82,51 +87,63 @@
         }
     </style>
     <br /><br /><br /><br />
-    <nav class="navbar navbar-expand-lg fixed-top ">
-        <a class="navbar-brand" href="dupindex.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav mr-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Login</a>
-                    <div class="dropdown-menu">
-                        <a class="nav-link dropdown-toggle" href="5.html" id="navbardrop1" data-toggle="dropdown">Patient</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="6.html">New Patient</a>
-                            <a class="dropdown-item" href="7.html">Existing Patient</a>
-                        </div>
-                            <a class="nav-link dropdown-toggle" href="8.html" id="navbardrop2" data-toggle="dropdown">Doctor</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="9.html">New Patient</a>
-                                <a class="dropdown-item" href="10.html">Existing Patient</a>
-                            </div>
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">Pharmicist</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">New Pharmicist</a>
-                                <a class="dropdown-item" href="#">Existing Pharmicist</a>
-                            </div>
-                        </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="#">Appointment</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="#">Our Doctor's</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " data-value="team" href="2.html">FAQ'S</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " data-value="contact" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " data-value="contact" href="4.html">Feedback</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                      <nav class="navbar navbar-expand-lg fixed-top ">
+                          <a class="navbar-brand" href="index.html">Home</a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                              <ul class="navbar-nav mr-4">
+                                  <li class="nav-item dropdown">
+                                      <div class="dropdown">
+                                          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                              Login
+                                              <span class="caret"></span>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                              <li class="dropdown-submenu">
+                                                  <a class="test" tabindex="-1" href="#">Patient Login <span class="caret"></span></a>
+                                                  <ul class="dropdown-menu">
+                                                      <li><a tabindex="-1" href="6.html">New Patient</a></li>
+                                                      <li><a tabindex="-1" href="7.html">Existing Patient</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="dropdown-submenu">
+                                                  <a class="test" tabindex="-1" href="#">Doctor Login <span class="caret"></span></a>
+                                                  <ul class="dropdown-menu">
+                                                      <li><a tabindex="-1" href="9.html">New Doctor</a></li>
+                                                      <li><a tabindex="-1" href="10.html">Existing Doctor</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="dropdown-submenu">
+                                                  <a class="test" tabindex="-1" href="#">Pharmcist Login <span class="caret"></span></a>
+                                                  <ul class="dropdown-menu">
+                                                      <li><a tabindex="-1" href="#">New Pharmicist</a></li>
+                                                      <li><a tabindex="-1" href="#">Existing Pharmicist</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link " data-value="portfolio" href="#">Appointment</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link " data-value="blog" href="#">Our Doctor's</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link " data-value="team" href="2.html">FAQ'S</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link " data-value="contact" href="#">Contact</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link " data-value="contact" href="4.html">Feedback</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </nav>
+
     <p id="col-1" style="color:red"></p>
     <p id="clock" style="color:red"></p>
     <script>
@@ -156,6 +173,16 @@
             document.getElementById("clock").innerHTML = d.toLocaleTimeString();
         }
     </script>
+
+    <script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
     <h1>
         Hospital Management System <span class="badge badge-secondary">Medi Care</span>
     </h1>
