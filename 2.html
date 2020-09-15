@@ -63,6 +63,30 @@
             color: red;
             font-size: xx-large;
         }
+
+        .faq li {
+            padding: 20px;
+        }
+
+            .faq li.q {
+                background-color: blue;
+                font-weight: bold;
+                font-size: 120%;
+                border-bottom: 1px #ddd solid;
+                cursor: pointer;
+            }
+
+            .faq li.a {
+                background: #3BB0D6;
+                display: none;
+                color: #fff;
+            }
+
+        .rotate {
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 <body>
@@ -150,38 +174,75 @@
             });
         });
     </script>
+    <script>
+        var action = 'click';
+        var speed = "500";
+
+
+        $(document).ready(function () {
+
+            // Question handler
+            $('li.q').on(action, function () {
+
+                // gets next element
+                // opens .a of selected question
+                $(this).next().slideToggle(speed)
+
+                    // selects all other answers and slides up any open answer
+                    .siblings('li.a').slideUp();
+
+                // Grab img from clicked question
+                var img = $(this).children('img');
+
+                // remove Rotate class from all images except the active
+                $('img').not(img).removeClass('rotate');
+
+                // toggle rotate class
+                img.toggleClass('rotate');
+
+            });
+
+        });
+    </script>
     <h1>Hospital Management System</h1>
-    <br><br><br><br><br><br><br><br><br><br>
-    <div>
-        <h2>Frequently Asked Questions </h2><br>
-        <h3>What is Hospital Management System?</h3>
-    </div>
-    <div>
-        <p> We will be able to  :</p>
-        <ul>
-            <li>Make appointment  </li>
-            <li>Check for the details or the prescription by the doctor.</li>
-            <li>It makes you to save your time.</li>
-        </ul>
-    </div>
-    <div>
-        <h3>Is taking appointment must to consult the doctor?</h3>
-    </div>
-    <div>
-        <p>Yes.</p>
-    </div>
-    <div>
-        <h3>What are the various methods to take the appointment?</h3>
-    </div>
-    <div>
-        <p>Patient or his/her attendant can get the online appointment (over internet) by visiting our website or can come to appointment-cum-registration counter in the hospital.</p>
-    </div>
-    <div>
-        <h3> What are the advantages of taking online appointment using our website?</h3>
-    </div>
-    <div>
-        <p>Patients can avoid long queues at the hospital for seeking appointment /registration.</p>
-    </div><br><br><br>
+    <br><br><br><br><br>
+    <h2>Frequently Asked Quetions</h2>
+    <br />
+    <ul class="faq">
+        <li class="q">
+            <img src="images/arrow.png">
+            What is Hospital Management System?
+        </li>
+        <li class="a">
+            <p> We will be able to  :</p>
+            <ul>
+                <li>Make appointment  </li>
+                <li>Check for the details or the prescription by the doctor.</li>
+                <li>It makes you to save your time.</li>
+            </ul>
+        </li>
+        <li class="q">
+            <img src="images/arrow.png">
+            Is taking appointment must to consult the doctor?
+        </li>
+        <li class="a"><p>Yes.</p></li>
+        <li class="q">
+            <img src="images/arrow.png">
+            What are the various methods to take the appointment?
+        </li>
+        <li class="a">
+            <p>Patient or his/her attendant can get the online appointment (over internet) by visiting our website or can come to appointment-cum-registration counter in the hospital.</p>
+        </li>
+        <li class="q">
+            <img src="images/arrow.png">
+            What are the advantages of taking online appointment using our website?
+        </li>
+        <li class="a">
+            <p>Patients can avoid long queues at the hospital for seeking appointment /registration.</p>
+        </li>
+    </ul>
+
+    <br><br><br><br><br><br>
     <table>
         <tr>
             <td>

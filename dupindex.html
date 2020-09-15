@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <title>FAQ'S</title>
     <title>Home Page</title>
     <style>
         .navbar {
@@ -37,9 +37,11 @@
             background: #fff !important;
         }
 
-        .nav-item {
-            background: #F97300;
+        .navbar-brand:hover {
+            background: #f4f4f4;
+            color: #f97300;
         }
+
         .bg-dark {
             background-color: #343a40 !important
         }
@@ -48,32 +50,44 @@
             background-color: #007bff !important
         }
 
-        .dropdown-item {
-            background: #F97300;
-        }
-
         .dropdown-toggle {
             background: #F97300;
         }
-        
-        
+
+        .dropdown-item {
+            background: #F97300;
+        }
 
         h1 {
             text-align: center;
             color: red;
             font-size: xx-large;
         }
-        img {
-            float: left;
+
+        .faq li {
+            padding: 20px;
         }
 
-        color {
-            color: #00ff00;
+            .faq li.q {
+                background-color: blue;
+                font-weight: bold;
+                font-size: 120%;
+                border-bottom: 1px #ddd solid;
+                cursor: pointer;
+            }
+
+            .faq li.a {
+                background: #3BB0D6;
+                display: none;
+                color: #fff;
+            }
+
+        .rotate {
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
         }
 
-        color1 {
-            color: red;
-        }
     </style>
 </head>
 <body>
@@ -86,136 +100,150 @@
             background-size: cover;
         }
     </style>
-    <br /><br /><br /><br />
-                      <nav class="navbar navbar-expand-lg fixed-top ">
-                          <a class="navbar-brand" href="index.html">Home</a>
-                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                              <ul class="navbar-nav mr-4">
-                                  <li class="nav-item dropdown">
-                                      <div class="dropdown">
-                                          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                              Login
-                                              <span class="caret"></span>
-                                          </button>
-                                          <ul class="dropdown-menu">
-                                              <li class="dropdown-submenu">
-                                                  <a class="test" tabindex="-1" href="#">Patient Login <span class="caret"></span></a>
-                                                  <ul class="dropdown-menu">
-                                                      <li><a tabindex="-1" href="6.html">New Patient</a></li>
-                                                      <li><a tabindex="-1" href="7.html">Existing Patient</a></li>
-                                                  </ul>
-                                              </li>
-                                              <li class="dropdown-submenu">
-                                                  <a class="test" tabindex="-1" href="#">Doctor Login <span class="caret"></span></a>
-                                                  <ul class="dropdown-menu">
-                                                      <li><a tabindex="-1" href="9.html">New Doctor</a></li>
-                                                      <li><a tabindex="-1" href="10.html">Existing Doctor</a></li>
-                                                  </ul>
-                                              </li>
-                                              <li class="dropdown-submenu">
-                                                  <a class="test" tabindex="-1" href="#">Pharmcist Login <span class="caret"></span></a>
-                                                  <ul class="dropdown-menu">
-                                                      <li><a tabindex="-1" href="#">New Pharmicist</a></li>
-                                                      <li><a tabindex="-1" href="#">Existing Pharmicist</a></li>
-                                                  </ul>
-                                              </li>
-                                          </ul>
-                                      </div>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link " data-value="portfolio" href="#">Appointment</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link " data-value="blog" href="#">Our Doctor's</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link " data-value="team" href="2.html">FAQ'S</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link " data-value="contact" href="#">Contact</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link " data-value="contact" href="4.html">Feedback</a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </nav>
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Login
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Patient Login <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="6.html">New Patient</a></li>
+                                    <li><a tabindex="-1" href="7.html">Existing Patient</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Doctor Login <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="9.html">New Doctor</a></li>
+                                    <li><a tabindex="-1" href="10.html">Existing Doctor</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Pharmcist Login <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">New Pharmicist</a></li>
+                                    <li><a tabindex="-1" href="#">Existing Pharmicist</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="portfolio" href="#">Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="blog" href="#">Our Doctor's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="team" href="2.html">FAQ'S</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="4.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <p id="col-1" style="color:red"></p>
+    <br /><br /><br />
     <p id="clock" style="color:red"></p>
     <script>
-        var today = new Date();
-        var hourNow = today.getHours();
-        var greeting;
-        if (hourNow < 12) {
-            greeting = "Good Morning";
-            icon = "coffee";
-        }
-        else if (hourNow < 20) {
-            greeting = 'Good afternoon!';
-            icon = "sun-o";
-        }
-        else if (hourNow < 24) {
-            greeting = "Good evening"
-            icon = "moon-o";
-        }
-        else {
-            greeting = "Welcome";
-        }
-
-        alert(document.getElementById("col-1").innerHTML = greeting);
         var myVar = setInterval(myTimer, 1000);
         function myTimer() {
             var d = new Date();
             document.getElementById("clock").innerHTML = d.toLocaleTimeString();
         }
     </script>
-
     <script>
-$(document).ready(function(){
-  $('.dropdown-submenu a.test').on("click", function(e){
-    $(this).next('ul').toggle();
-    e.stopPropagation();
-    e.preventDefault();
-  });
-});
-</script>
-    <h1>
-        Hospital Management System <span class="badge badge-secondary">Medi Care</span>
-    </h1>
-    <marquee>
-        <color1>
-            *Please stay in the house till everything gets normal.If you have very important work to do then and then only go out with wearing mask properly*
-        </color1>
-    </marquee>
-    <br><br>
-    <div class="card p-4 w-100" style="background-color:cyan">
-        <div class="card-header">
-            <strong>
-                Guidlines by the doctors during the corona period
-            </strong>
-            <p>WHO</p>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Guidelines</h5>
-            <img src="download.jpg"
-                 style="width: auto; float:right; clear:right"
-                 alt="Guidelines by WHO Doctors">
-            <p class="card-text">
-                Doctors are the helping hands in the current situation that the whole world is facing today.<br>We all are thankful to all
-                the doctors that are helping and providing aid to all the patients.<br>We all are very thankful to all the doctors of ur country. Using this
-                website you will be able <br>to make appointments online so that you may not need to go out in this situation.
-            </p>
-            <a href="https://www.who.int/" class="btn btn-primary">WHO Guidelines</a>
-        </div>
-    </div>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.test').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        var action = 'click';
+        var speed = "500";
+
+
+        $(document).ready(function () {
+
+            // Question handler
+            $('li.q').on(action, function () {
+
+                // gets next element
+                // opens .a of selected question
+                $(this).next().slideToggle(speed)
+
+                    // selects all other answers and slides up any open answer
+                    .siblings('li.a').slideUp();
+
+                // Grab img from clicked question
+                var img = $(this).children('img');
+
+                // remove Rotate class from all images except the active
+                $('img').not(img).removeClass('rotate');
+
+                // toggle rotate class
+                img.toggleClass('rotate');
+
+            });
+
+        });
+    </script>
+    <h1>Hospital Management System</h1>
+    <br><br><br><br><br>
+    <h2>Frequently Asked Quetions</h2>
     <br />
+                    <ul class="faq">
+                        <li class="q">
+                            <img src="images/arrow.png">
+                            What is Hospital Management System?
+                        </li>
+                        <li class="a">
+                            <p> We will be able to  :</p>
+                            <ul>
+                                <li>Make appointment  </li>
+                                <li>Check for the details or the prescription by the doctor.</li>
+                                <li>It makes you to save your time.</li>
+                            </ul>
+                        </li>
+                        <li class="q">
+                            <img src="images/arrow.png">
+                            Is taking appointment must to consult the doctor?
+                        </li>
+                        <li class="a"><p>Yes.</p></li>
+                        <li class="q">
+                            <img src="images/arrow.png">
+                            What are the various methods to take the appointment?
+                        </li>
+                        <li class="a">
+                            <p>Patient or his/her attendant can get the online appointment (over internet) by visiting our website or can come to appointment-cum-registration counter in the hospital.</p>
+                        </li>
+                        <li class="q">
+                            <img src="images/arrow.png">
+                            What are the advantages of taking online appointment using our website?
+                        </li>
+                        <li class="a">
+                            <p>Patients can avoid long queues at the hospital for seeking appointment /registration.</p>
+                        </li>
+                    </ul>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+    <br><br><br><br><br><br>
     <table>
         <tr>
             <td>
@@ -250,13 +278,5 @@ $(document).ready(function(){
             </td>
         </tr>
     </table>
-
 </body>
-
 </html>
-
-
-
-
-
-
